@@ -9,6 +9,11 @@ repository: https://github.com/PopovVA/security_doctor_lints
 environment:
   sdk: ^3.5.0
 
+# The example hardcodes fake credentials on purpose — it demonstrates
+# what these lints detect.
+false_secrets:
+  - /example/lib/main.dart
+
 dependencies:
   analyzer: ^8.0.0
   custom_lint_builder: ^0.8.1
