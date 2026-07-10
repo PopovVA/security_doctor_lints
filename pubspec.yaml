@@ -11,7 +11,6 @@ environment:
 
 dependencies:
   analyzer: ^8.0.0
-  analyzer_plugin: ^0.13.0
   custom_lint_builder: ^0.8.1
   security_doctor: ^0.5.0
 
