@@ -1,0 +1,11 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  exclude:
+    # Deliberately vulnerable code that demonstrates the lints.
+    - example/**
+
+linter:
+  rules:
+    - prefer_single_quotes
+    - unawaited_futures

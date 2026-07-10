@@ -1,0 +1,6 @@
+# https://dart.dev/guides/libraries/private-files
+.dart_tool/
+build/
+pubspec.lock
+coverage/
+pubspec_overrides.yaml

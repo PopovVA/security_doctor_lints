@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: dart pub get
+      - run: dart format --output=none --set-exit-if-changed .
+      - run: dart analyze --fatal-infos
+      # The test drives `dart run custom_lint` in example/ end to end.
+      # No coverage gate: the plugin runs out-of-process, so line
+      # coverage of the adapter is not observable here.
+      - run: dart test
+      # Dependency audit (dogfooding the sibling package).
+      - run: dart pub global activate pubspec_doctor
+      - run: dart pub global run pubspec_doctor --fail-on-stale
+      # pub.dev score guard.
+      - run: dart pub global activate pana
+      - run: dart pub global run pana --no-warning --exit-code-threshold 60 .
+      # Lower-bound check, mirroring pub.dev's downgrade analysis.
+      - run: dart pub downgrade
+      - run: dart analyze --fatal-infos
