@@ -3,7 +3,7 @@ description: >-
   IDE lints for security_doctor: OWASP MASVS and CWE mapped security
   findings from SD001-SD004 and SD008 shown right in the editor, with
   quick fixes, via custom_lint.
-version: 0.1.0
+version: 0.2.0
 repository: https://github.com/PopovVA/security_doctor_lints
 
 environment:
