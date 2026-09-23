@@ -1,0 +1,3 @@
+# The example app is deliberately vulnerable: it exists so the lints have
+# something to flag in an editor. Its secrets are documentation placeholders.
+example/lib/main.dart
