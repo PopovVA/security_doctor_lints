@@ -6,6 +6,13 @@ description: >-
 version: 0.1.1
 repository: https://github.com/PopovVA/security_doctor_lints
 
+topics:
+  - security
+  - linter
+  - custom-lint
+  - static-analysis
+  - code-quality
+
 environment:
   sdk: ^3.5.0
 
