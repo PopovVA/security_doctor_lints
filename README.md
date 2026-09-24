@@ -1,6 +1,7 @@
 # security_doctor_lints
 
 [![CI](https://github.com/PopovVA/security_doctor_lints/actions/workflows/ci.yml/badge.svg)](https://github.com/PopovVA/security_doctor_lints/actions/workflows/ci.yml)
+[![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-support-FFDD00?logo=buymeacoffee&logoColor=black)](https://buymeacoffee.com/LeonRedfield)
 
 [security_doctor](https://pub.dev/packages/security_doctor)'s Dart
 rules, delivered straight into the IDE via
@@ -43,6 +44,11 @@ Standard analyzer comments work: `// ignore: sd002` on the line above,
 or `// ignore_for_file: sd002`. For project-wide policy, thresholds and
 baselines, use the [security_doctor](https://pub.dev/packages/security_doctor)
 CLI — this package is the IDE view of the same rules.
+
+## Support
+
+This package is free and maintained in my own time. If it saved you some,
+[buy me a coffee](https://buymeacoffee.com/LeonRedfield).
 
 ## License
 
